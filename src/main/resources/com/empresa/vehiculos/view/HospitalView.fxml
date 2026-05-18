@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="777.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HospitalController">
+  <tabs>
+    <Tab text="Registrar Médico">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="Nombre" layoutX="102.0" layoutY="19.0" text="Nombre " />
+                  <Label layoutX="101.0" layoutY="67.0" text="Dirección" />
+                  <Label layoutX="103.0" layoutY="108.0" text="Teléfono " />
+                  <Label layoutX="425.0" layoutY="28.0" text="Edad             " />
+                  <Label layoutX="425.0" layoutY="100.0" text="Salario" />
+                  <Label layoutX="422.0" layoutY="67.0" text="Especialidad " />
+                  <Label layoutX="429.0" layoutY="129.0" text="Nivel" />
+                  <ComboBox fx:id="NivelMedico" layoutX="517.0" layoutY="134.0" prefWidth="150.0" promptText="Nivel de Experiencia" />
+                  <TextField fx:id="NombreMedico" layoutX="103.0" layoutY="37.0" />
+                  <TextField fx:id="DireccionMedico" layoutX="103.0" layoutY="84.0" />
+                  <TextField fx:id="TelefonoMedico" layoutX="103.0" layoutY="125.0" />
+                  <TextField fx:id="EdadMedico" layoutX="518.0" layoutY="25.0" />
+                  <TextField fx:id="EspecialidadMedico" layoutX="518.0" layoutY="63.0" />
+                  <TextField fx:id="SalarioMedico" layoutX="516.0" layoutY="97.0" />
+                  <Button fx:id="MostrarMedico" layoutX="68.0" layoutY="436.0" mnemonicParsing="false" onAction="#MostrarMedico" text="MOSTRAR" />
+                  <Button fx:id="LimpiarMedico" layoutX="358.0" layoutY="436.0" mnemonicParsing="false" onAction="#LimpiarMedico" text="LIMPIAR" />
+                  <Button fx:id="SalirMedico" layoutX="644.0" layoutY="436.0" mnemonicParsing="false" onAction="#SalirMedico" text="SALIR" />
+                  <TableView fx:id="MostrarResultadosMedico" layoutX="27.0" layoutY="170.0" prefHeight="236.0" prefWidth="727.0">
+                    <columns>
+                      <TableColumn fx:id="ColNombreMedico" prefWidth="98.0" text="Nombre" />
+                      <TableColumn fx:id="ColDireccionMedico" prefWidth="105.0" text="Dirección" />
+                        <TableColumn fx:id="ColTelefonoMedico" prefWidth="105.0" text="Teléfono " />
+                        <TableColumn fx:id="ColEdadMedico" prefWidth="105.0" text="Edad" />
+                        <TableColumn fx:id="ColEspecialidadMedico" prefWidth="105.0" text="Especialidad" />
+                        <TableColumn fx:id="ColSalarioMedico" prefWidth="105.0" text="Salario" />
+                        <TableColumn fx:id="ColNivelMedico" prefWidth="105.0" text="Nivel" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Registrar Enfermeras">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="120.0" layoutY="42.0" text="Nombre" />
+                  <Label layoutX="120.0" layoutY="88.0" text="Dirección" />
+                  <Label layoutX="120.0" layoutY="135.0" text="Teléfono " />
+                  <Label layoutX="408.0" layoutY="42.0" text="Edad" />
+                  <Label layoutX="408.0" layoutY="88.0" text="Salario" />
+                  <Label layoutX="408.0" layoutY="135.0" text="Categoría" />
+                  <TextField fx:id="NombreEnfermera" layoutX="183.0" layoutY="38.0" />
+                  <TextField fx:id="DireccionEnfermera" layoutX="183.0" layoutY="84.0" />
+                  <TextField fx:id="TelefonoEnfermera" layoutX="183.0" layoutY="131.0" />
+                  <TextField fx:id="EdadEnfermera" layoutX="480.0" layoutY="38.0" />
+                  <TextField fx:id="SalarioEnfermera" layoutX="480.0" layoutY="84.0" />
+                  <ComboBox fx:id="CategoriaEnfermera" layoutX="480.0" layoutY="131.0" prefHeight="25.0" prefWidth="174.0" promptText="Selecciona tu Categoría" />
+                  <TableView fx:id="MostrarResultadosEnfermera" layoutX="39.0" layoutY="187.0" prefHeight="236.0" prefWidth="700.0">
+                    <columns>
+                      <TableColumn fx:id="ColNombreEnfermera" prefWidth="136.0" text="Nombre" />
+                      <TableColumn fx:id="ColDireccionEnfermera" prefWidth="129.0" text="Dirección" />
+                        <TableColumn fx:id="ColTelefonoEnfermera" prefWidth="116.0" text="Teléfono" />
+                        <TableColumn fx:id="ColEdadEnfermera" prefWidth="71.0" text="Edad" />
+                        <TableColumn fx:id="ColSalarioEnfermera" prefWidth="101.0" text="Salario" />
+                        <TableColumn fx:id="ColCategoriaEnfermera" prefWidth="146.0" text="Categoría" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="MostrarEnfermera" layoutX="94.0" layoutY="440.0" mnemonicParsing="false" onAction="#MostrarEnfermera" text="MOSTRAR" />
+                  <Button fx:id="LimpiarEnfermera" layoutX="356.0" layoutY="440.0" mnemonicParsing="false" onAction="#LimpiarEnfermera" text="LIMPIAR" />
+                  <Button fx:id="SalirEnfermera" layoutX="603.0" layoutY="440.0" mnemonicParsing="false" onAction="#SalirEnfermera" text="SALIR" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Registrar Pacientes">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="36.0" layoutY="65.0" text="Dirección" />
+                  <Label layoutX="276.0" layoutY="26.0" text="Edad" />
+                  <Label layoutX="264.0" layoutY="104.0" text="Fecha Alta" />
+                  <Label layoutX="589.0" layoutY="11.0" text="Motivo Consulta" />
+                  <Label layoutX="259.0" layoutY="65.0" text="Fecha Ingreso" />
+                  <Label layoutX="38.0" layoutY="103.0" text="Teléfono" />
+                  <Label layoutX="39.0" layoutY="31.0" text="Nombre" />
+                  <Label layoutX="509.0" layoutY="106.0" text="Medicamentos" />
+                  <TextField fx:id="NombrePaciente" layoutX="93.0" layoutY="27.0" />
+                  <TextField fx:id="DireccionPaciente" layoutX="93.0" layoutY="61.0" />
+                  <TextField fx:id="TelefonoPaciente" layoutX="93.0" layoutY="100.0" />
+                  <TextField fx:id="EdadPaciente" layoutX="339.0" layoutY="27.0" />
+                  <TextField fx:id="FechaIngresoPaciente" layoutX="340.0" layoutY="61.0" />
+                  <TextField fx:id="FechaAltaPaciente" layoutX="339.0" layoutY="100.0" />
+                  <TextField fx:id="MotivoPaciente" layoutX="509.0" layoutY="31.0" prefHeight="62.0" prefWidth="247.0" />
+                  <TextField fx:id="MedicamentosPaciente" layoutX="595.0" layoutY="103.0" prefHeight="25.0" prefWidth="164.0" />
+                  <TableView fx:id="MostrarResultadosPaciente" layoutX="23.0" layoutY="141.0" prefHeight="254.0" prefWidth="732.0">
+                    <columns>
+                      <TableColumn fx:id="ColNombrePaciente" prefWidth="105.0" text="Nombre" />
+                      <TableColumn fx:id="ColDireccionPaciente" prefWidth="65.0" text="Dirección" />
+                        <TableColumn fx:id="ColTelefonoPaciente" text="Teléfono" />
+                        <TableColumn fx:id="ColEdadPaciente" prefWidth="50.0" text="Edad" />
+                        <TableColumn fx:id="ColFechaIngresoPaciente" prefWidth="90.0" text="Fecha Ingreso" />
+                        <TableColumn fx:id="ColAltaIngresoPaciente" prefWidth="97.0" text="Fecha Alta" />
+                        <TableColumn fx:id="ColMotivoPaciente" prefWidth="114.0" text="Motivo Consulta" />
+                        <TableColumn fx:id="ColMedicamentosPaciente" prefWidth="130.0" text="Medicamentos" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="MostrarPaciente" layoutX="57.0" layoutY="424.0" mnemonicParsing="false" onAction="#MostrarPaciente" text="MOSTRAR" />
+                  <Button fx:id="LimpiarPaciente" layoutX="340.0" layoutY="424.0" mnemonicParsing="false" onAction="#LimpiarPaciente" text="LIMPIAR" />
+                  <Button fx:id="SalirPaciente" layoutX="651.0" layoutY="424.0" mnemonicParsing="false" onAction="#SalirPaciente" text="SALIR" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

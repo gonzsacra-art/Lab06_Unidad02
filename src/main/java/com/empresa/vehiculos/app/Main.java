@@ -6,31 +6,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Punto de entrada de la aplicación JavaFX.
- * Carga MainView.fxml y configura la ventana principal.
- *
- * Para ejecutar con Maven:
- *   mvn javafx:run
- *
- * Para ejecutar desde un IDE sin module-info:
- *   Agregar VM args:
- *   --module-path <ruta-javafx-lib> --add-modules javafx.controls,javafx.fxml
- */
+import java.util.Objects;
+
 public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/com/empresa/vehiculos/view/MainView.fxml"));
-        Parent root = loader.load();
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/empresa/vehiculos/view/HospitalView.fxml"
+                        )
+                )
+        );
 
         Scene scene = new Scene(root);
-        stage.setTitle("Sistema de Gestion de Vehiculos");
+
+        stage.setTitle("Sistema Hospital");
+
         stage.setScene(scene);
-        stage.setMinWidth(900);
-        stage.setMinHeight(620);
         stage.show();
+
     }
 
     public static void main(String[] args) {
